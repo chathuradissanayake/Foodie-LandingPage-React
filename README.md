@@ -4,9 +4,7 @@ Sources of the Project:
 
 
 import './App.css'; 
-
 import Home from './Components/Home';
-
 import Logo from "./Assets/Logo.svg";
 import { BsCart2} from "react-icons/bs";
 import { HiOutlineBars3 } from 'react-icons/hi2';
