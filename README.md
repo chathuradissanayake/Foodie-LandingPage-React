@@ -3,8 +3,10 @@ Sources of the Project:
     Material UI
 
 
-import './App.css'; /n
+import './App.css'; 
+
 import Home from './Components/Home';
+
 import Logo from "./Assets/Logo.svg";
 import { BsCart2} from "react-icons/bs";
 import { HiOutlineBars3 } from 'react-icons/hi2';
