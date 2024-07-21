@@ -3,6 +3,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
 import PhoneRoundedIcon from '@mui/icons-material/PhoneRounded';
 import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
+import { Box, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 import React, { useState } from 'react';
 import { BsCart2 } from "react-icons/bs";
 import { HiOutlineBars3 } from 'react-icons/hi2';
@@ -52,6 +53,30 @@ const NavBar = () => {
       </div>
       <div className='navbar-manu-contain'>
         <HiOutlineBars3 onClick={() => setOpenManu(true)}/>
+      </div>
+
+      <div>
+        <Drawer open={openManu} onClose={() => setOpenManu(false)} anchor='right'>
+          <Box
+                        sx={{width:250}}
+                        role= "presentation"
+                        onClick={() => setOpenManu(false)}
+                        onKeyDown={() => setOpenManu(false)}
+          >
+            <List>
+              {manuOptions.map((item) => (
+                <ListItem key={item.text} desablePadding>
+                  <ListItemButton>
+                    <ListItemIcon>{item.icon}</ListItemIcon>
+                    <ListItemText primary={item.text}/>
+                  </ListItemButton>
+                </ListItem>
+
+              ))}
+            </List>
+          </Box>
+
+        </Drawer>
       </div>
     </nav>
   )
